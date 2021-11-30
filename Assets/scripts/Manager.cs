@@ -35,12 +35,15 @@ public class Manager : MonoBehaviour
     public void Start()
     {
         _targets = GameObject.FindGameObjectsWithTag(FactoryTag);
-        do
+
+        int start = Random.Range(0, Foods.Length);
+        int end = Random.Range(0, Foods.Length);
+
+        if (start == end)
         {
-            int start = Random.Range(0, 5);
-            int end = Random.Range(0, 5);
+            end += 1;
+            if (end == Foods.Length) { end = 0; }
         }
-        while (start == end);
         Debug.Log(start);
         Debug.Log(end);
         food = Foods[start];//for picking up the tag

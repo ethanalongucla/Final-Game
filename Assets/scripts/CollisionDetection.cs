@@ -13,11 +13,11 @@ public class CollisionDetection : MonoBehaviour
     // Update is called once per frame
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "food")//
+        if (other.gameObject.tag == Manager.Instance.food)//
         {
             Destroy(other.gameObject);//
+            Debug.Log("explode" + other.gameObject.name);
+            Debug.Log(Manager.Instance.food);
         }
-        Debug.Log("explode" + other.gameObject.name);
-        Debug.Log(Manager.Instance.food);
     }
 }
