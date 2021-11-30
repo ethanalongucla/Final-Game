@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3100432425423486463}
   - component: {fileID: 3100432425428963583}
   - component: {fileID: 2127960095988010768}
+  - component: {fileID: 63782089}
+  - component: {fileID: 1788100771134028810}
   m_Layer: 7
   m_Name: bookstore
   m_TagString: Notnavmesh
@@ -27,7 +29,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3100432425421546303}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -44.86}
   m_LocalScale: {x: 6.521031, y: 4.607532, z: 6.521031}
   m_Children: []
@@ -119,3 +121,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3100432425421546303}
   m_CullTransparentMesh: 1
+--- !u!114 &63782089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100432425421546303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fbddf2bbefe62949a005afee6071469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 1170003027164778071, guid: aa9161dfb651b874f8ee2c75c044984e, type: 3}
+  Target: {fileID: 0}
+  MakeRate: 2
+--- !u!65 &1788100771134028810
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100432425421546303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6613103, y: 1.1750573, z: 1.4569563}
+  m_Center: {x: 0, y: 0.58752865, z: -0.15110438}
