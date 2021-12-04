@@ -8,7 +8,8 @@ TagManager:
   - Wall
   - Factory
   - Food
-  - Score
+  - chikenleg
+  - hamburger
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - Terrain
   - Fog
-  - 
+  - Notwalkable
   - 
   - 
   - 

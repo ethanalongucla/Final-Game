@@ -19,12 +19,12 @@ public class Manager : MonoBehaviour
     private GameObject[] _targets;
     public string FactoryTag = "Factory";
     public string Food1 = "chickenleg";
-    public string Food2 = "hamberger";
+    public string Food2 = "hamburger";
     public string Food3 = "shrimp";
     public string Food4 = "pineapple";
     public string Food5 = "icecream";
     public string Food6 = "fries";
-    public string[] Foods = new string[] { "chikenleg", "hamberger", "shrimp", "pineapple", "icecream", "fries" };
+    public string[] Foods = new string[] { "chikenleg", "hamburger", "shrimp", "pineapple", "icecream", "fries" };
     public GameObject target;
     public string food;
     public int start = 1;

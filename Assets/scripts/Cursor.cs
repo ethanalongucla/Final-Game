@@ -37,6 +37,7 @@ public class Cursor : MonoBehaviour
                 Debug.Log("Wallnothit");
                 Rotator rotate = _selectedWall.GetComponent<Rotator>();
                 rotate.enabled = false;
+                UpdateAllNavMesh();
                 sb = false;
             }
         }
