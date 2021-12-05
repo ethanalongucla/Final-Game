@@ -112,7 +112,7 @@ public class Cursor : MonoBehaviour
         //local variables
         float width = Screen.width;
         float height = Screen.height;
-        float multiplier = Speed * Time.deltaTime;
+        float multiplier = Speed * Time.deltaTime * 5;
         Vector2 anchor = rect.anchoredPosition;
 
         //update values

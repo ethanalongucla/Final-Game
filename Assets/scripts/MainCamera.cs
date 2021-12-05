@@ -15,10 +15,13 @@ public class MainCamera : MonoBehaviour
     private void Update()
     {
         //get input
-        Vector3 joy = new Vector3(Input.GetAxis("LeftJoyX"), 0, -Input.GetAxis("LeftJoyY"));
+        Vector3 joy = new Vector3(Input.GetAxis("LeftJoyX"), Input.GetAxis("LeftPad"), -Input.GetAxis("LeftJoyY"));
+
         //camera vectors
+        Vector3 up = Camera.main.transform.up;
         Vector3 forward = Camera.main.transform.forward;
-        Debug.DrawRay(transform.position, forward * 10, Color.red);
+        Vector3 vertical = Vector3.ProjectOnPlane(up, Vector3.forward);
+        Debug.DrawRay(transform.position, vertical * 10, Color.red);
         Vector3 project = Vector3.ProjectOnPlane(forward, Vector3.up);
         Debug.DrawRay(transform.position, project * 10, Color.blue);
         Vector3 right = Camera.main.transform.right;
@@ -28,7 +31,7 @@ public class MainCamera : MonoBehaviour
         if (joy.magnitude < 0.3f) { return; }
         Debug.Log("camera Move");
         //move camera
-        Vector3 move = right * joy.x + project * joy.z;
+        Vector3 move = right * joy.x + vertical * joy.y + project * joy.z;
         transform.Translate(move * Time.deltaTime * speed);
         Debug.DrawRay(transform.position, move, Color.red);
     }
